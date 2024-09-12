@@ -107,7 +107,7 @@ const PostSlice = createSlice({
       state.fetchError = action.error.message;
     });
     builder.addCase(addPosts.fulfilled, (state, action) => {
-      action.payload.date = new Date().toISOString();
+      action.payload.dateTime = new Date().toISOString();
       action.payload.reactions = {
         thumbsUp: 0,
         wow: 0,
